@@ -1,12 +1,14 @@
 <script>
+	import About from "./components/About.svelte";
 	export let name;
 	export let lastName;
 	let svelteLogo = "http://arepa.s3.amazonaws.com/svelte-logo.png"
+
 </script>
 
 <main>
 	<h1>Hello {name} {lastName}</h1>
-	<p>Frontend Developer</p>
+	<About />
 	<img src="{ svelteLogo }" alt="Svelte" />
 </main>
 
@@ -37,11 +39,6 @@
 		text-transform: uppercase;
 		font-size: 4em;
 		font-weight: 100;
-	}
-
-	p {
-		color: var(--theme-color);
-		font-size: 22px;
 	}
 
 	@media (min-width: 640px) {
